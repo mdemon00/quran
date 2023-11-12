@@ -1,17 +1,19 @@
+<!-- Update the code to display surah details and ayahs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surah <%= surah.name %></title>
+  <title>Surah <%= surah.name_arabic %></title>
 </head>
 <body>
-  <h1>Surah <%= surah.name %></h1>
+  <h1>Surah <%= surah.name_arabic %></h1>
   <ul>
-    <% surah.ayahs.forEach((verse) => { %>
+    <% ayahs.forEach((ayah) => { %>
       <li>
-        <p>Verse <%= verse.number %></p>
-        <p>Arabic: <%= verse.text %></p>
+        <p>Verse <%= ayah.verse_key %></p>
+        <p>Uthmani Script: <%= ayah.text_uthmani %></p>
+        <!-- Add other ayah details as needed -->
       </li>
     <% }); %>
   </ul>

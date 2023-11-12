@@ -12,7 +12,7 @@
     <% surahs.forEach((surah) => { %>
       <li>
         <p>Surah <%= surah.id %></p>
-        <p>Name: <%= surah.name_arabic %></p>
+        <a href="/surah/<%= surah.id %>"><%= surah.name_arabic %></a>
         <p>Translated Name: <%= surah.translated_name.name %></p>
         <p>Revelation Place: <%= surah.revelation_place %></p>
         <p>Revelation Order: <%= surah.revelation_order %></p>
