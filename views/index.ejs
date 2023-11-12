@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran Web App</title>
+</head>
+<body>
+  <h1>List of Surahs</h1>
+<!-- Update the links to point to the surah route -->
+<ul>
+  <% surahs.forEach((surah) => { %>
+    <li><a href="/surah/<%= surah.number %>"><%= surah.name %></a></li>
+  <% }); %>
+</ul>
+  </ul>
+</body>
+</html>
