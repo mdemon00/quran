@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -27,7 +27,7 @@ app.get('/surah/:number', async (req, res) => {
       const surah = response.data.data;
   
       console.log(surah);
-      
+
       // Render the surah page
       res.render('surah', { surah });
     } catch (error) {
