@@ -1,18 +1,25 @@
+<!-- Update the code to display surahs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quran Web App</title>
+  <title>List of Surahs</title>
 </head>
 <body>
   <h1>List of Surahs</h1>
-<!-- Update the links to point to the surah route -->
-<ul>
-  <% surahs.forEach((surah) => { %>
-    <li><a href="/surah/<%= surah.number %>"><%= surah.name %></a></li>
-  <% }); %>
-</ul>
+  <ul>
+    <% surahs.forEach((surah) => { %>
+      <li>
+        <p>Surah <%= surah.id %></p>
+        <p>Name: <%= surah.name_arabic %></p>
+        <p>Translated Name: <%= surah.translated_name.name %></p>
+        <p>Revelation Place: <%= surah.revelation_place %></p>
+        <p>Revelation Order: <%= surah.revelation_order %></p>
+        <p>Verses Count: <%= surah.verses_count %></p>
+        <!-- Add other surah details as needed -->
+      </li>
+    <% }); %>
   </ul>
 </body>
 </html>
