@@ -25,8 +25,6 @@ app.get('/surah/:number', async (req, res) => {
       // Fetch specific surah data from the API
       const response = await axios.get(`https://api.alquran.cloud/v1/surah/${surahNumber}`);
       const surah = response.data.data;
-  
-      console.log(surah);
 
       // Render the surah page
       res.render('surah', { surah });
